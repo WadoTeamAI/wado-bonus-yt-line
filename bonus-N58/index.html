@@ -1,0 +1,275 @@
+<!DOCTYPE html><html lang='ja'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width, initial-scale=1'><meta name='robots' content='noindex, nofollow, noarchive'><title>YouTube 0→100ロードマップ 現在地診断 ── AI社員を雇って、YouTubeチームを持とう｜LINE登録特典</title><style>
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;font-family:'Noto Sans JP','Hiragino Sans','Yu Gothic',sans-serif;font-size:16px;line-height:1.8;letter-spacing:.04em;color:var(--text);background:var(--bg)}
+a{color:var(--link)}img{max-width:100%;height:auto;display:block}
+.wrap{max-width:1080px;margin:0 auto;padding:0 16px}
+header.site{padding:40px 0 28px;color:#fff;background:var(--hero)}
+header.site h1{margin:0 0 6px;font-size:28px;line-height:1.3}
+header.site p{margin:0;opacity:.9;font-size:15px}
+.stamp{display:inline-block;font-size:12px;letter-spacing:.2em;padding:3px 10px;border:1px solid rgba(255,255,255,.6);border-radius:999px;margin-bottom:12px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px;padding:28px 0 40px}
+.card{background:var(--card);border-radius:14px;overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column;border:1px solid var(--border)}
+.card .ph{aspect-ratio:16/9;background:var(--ph);display:flex;align-items:center;justify-content:center;color:#fff;font-size:34px;font-weight:800;letter-spacing:.06em}
+.card .bd{padding:14px 16px 16px;display:flex;flex-direction:column;gap:8px;flex:1}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tag{font-size:11px;padding:2px 8px;border-radius:999px;background:var(--tagbg);color:var(--tagfg);white-space:nowrap}
+.tag.k{background:var(--accent);color:#fff}
+.card h2{font-size:17px;margin:0;line-height:1.45}
+.card p{margin:0;font-size:13.5px;color:var(--muted);flex:1}
+.btn{display:inline-block;text-align:center;padding:10px 16px;border-radius:10px;font-weight:700;text-decoration:none;color:#fff;background:var(--btn)}
+.btn.dis{background:var(--muted);pointer-events:none}
+.btn.ghost{background:transparent;color:var(--link);border:1px solid var(--border)}
+article{padding:28px 0 48px}
+article .hero{display:grid;grid-template-columns:1fr;gap:18px;margin-bottom:24px}
+@media(min-width:760px){article .hero{grid-template-columns:1.1fr 1fr;align-items:center}}
+article h1{font-size:26px;line-height:1.35;margin:8px 0}
+article .lead{color:var(--muted);margin:0 0 12px}
+.toc{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:14px 18px;margin:0 0 24px}
+.toc b{display:block;margin-bottom:6px}.toc ul{margin:0;padding-left:18px}.toc li{margin:2px 0;font-size:14px}
+.body h2{font-size:20px;margin:36px 0 10px;padding-bottom:6px;border-bottom:2px solid var(--accent)}
+.body h3{font-size:17px;margin:24px 0 8px}
+.body table{width:100%;border-collapse:collapse;font-size:14px;margin:12px 0}
+.body th{background:var(--accent);color:#fff;text-align:left;padding:6px 8px}
+.body td{padding:6px 8px;border-bottom:1px solid var(--border);vertical-align:top}
+.body pre{background:var(--pre);padding:12px;border-radius:8px;overflow-x:auto;font-size:13.5px;white-space:pre-wrap}
+.body code{background:var(--pre);padding:1px 5px;border-radius:4px;font-size:.92em}
+.body blockquote{margin:12px 0;padding:8px 14px;border-left:4px solid var(--accent);background:var(--card)}
+.tbl{overflow-x:auto}
+.pending{background:var(--card);border:1px dashed var(--border);border-radius:12px;padding:24px;text-align:center;color:var(--muted)}
+nav.pn{display:flex;justify-content:space-between;gap:12px;margin:36px 0 0;padding-top:18px;border-top:1px solid var(--border);font-size:14px}
+nav.pn a{max-width:48%}nav.pn span{color:var(--muted)}
+footer.site{padding:24px 0 40px;font-size:12.5px;color:var(--muted);border-top:1px solid var(--border)}
+footer.site p{margin:4px 0}
+.crumb{font-size:13px;margin:16px 0 0}.crumb a{text-decoration:none}
+.sec{padding:26px 0 6px;border-top:1px solid var(--border)}
+.sec:first-of-type{border-top:0;padding-top:20px}
+.sec>h2{font-size:20px;margin:0 0 4px;padding-left:12px;border-left:5px solid var(--accent);line-height:1.4}
+.sec>p{margin:0;font-size:13.5px;color:var(--muted)}
+.sec .grid{padding:16px 0 12px}
+.linkcard{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px 22px;margin:18px 0 30px;box-shadow:var(--shadow)}
+.linkcard p{margin:0 0 12px;font-size:14px;color:var(--muted)}
+.lib{padding:8px 0 30px}
+.lib h3{font-size:16px;margin:22px 0 6px;padding-left:10px;border-left:4px solid var(--accent)}
+.lib .grid{padding:8px 0 16px}
+.lib .card h2{font-size:15px}.lib .card p{display:none}
+.lib .note{font-size:13px;color:var(--muted);margin:4px 0 0}
+
+:root{--bg:#f5f3ff;--card:#fff;--text:#374151;--muted:#6b7280;--link:#4f46e5;--border:#e5e7eb;--accent:#6366f1;--btn:linear-gradient(90deg,#6366f1,#a855f7);--hero:linear-gradient(120deg,#1e1b4b,#6366f1 60%,#a855f7);--ph:linear-gradient(135deg,#1e1b4b,#6366f1);--tagbg:#eef2ff;--tagfg:#4338ca;--shadow:0 8px 24px rgba(30,27,75,.08);--pre:#f3f4f6}
+</style></head><body>
+<header class='site'><div class='wrap'><span class='stamp'>YOUTUBE AI TEAM</span><h1 style=font-size:20px>AI社員を雇って、YouTubeチームを持とう｜LINE登録特典</h1></div></header>
+<main class='wrap'><p class='crumb'><a href='../'>← 一覧へ戻る</a></p><article>
+<div class='hero'><div><div class='card'><div class='ph'>N58</div></div></div><div><div class='tags'><span class='tag k'>新規</span><span class='tag'>ロードマップ</span><span class='tag'>資料</span><span class='tag'>LINE登録特典</span></div><h1>YouTube 0→100ロードマップ 現在地診断</h1><p class='lead'>10問に答えると、いまの段階と次にやる1つが分かる</p><span class='tag' style='font-size:13px;padding:6px 12px;white-space:normal;display:inline-block'>このページが特典の本体です。下へスクロールして使ってください</span></div></div>
+<div class='toc'><b>目次</b><div class="toc">
+<ul>
+<li><a href="#01005">0→100ロードマップ（5つの段階）</a></li>
+<li><a href="#10">10問に答える</a></li>
+<li><a href="#_1">結果の読み方（画面で答えられないとき・印刷するとき）</a></li>
+<li><a href="#_2">この結果の使い方</a></li>
+<li><a href="#ai">最新AIが出たときも、段階は変わらない</a></li>
+</ul>
+</div>
+</div>
+<div class='body'><h1 id="youtube-0100">YouTube 0→100ロードマップ 現在地診断</h1>
+<blockquote>
+<p>10問に「はい・いいえ」で答えると、0→100ロードマップのどの段階にいるかと、次にやる1つが分かります。3分ほどで終わります。</p>
+</blockquote>
+<h2 id="01005">0→100ロードマップ（5つの段階）</h2>
+<div class='tbl'><table>
+<thead>
+<tr>
+<th>段階</th>
+<th>やること</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>段階1 学ぶ</td>
+<td>収益につながるAIスキルを学ぶ</td>
+</tr>
+<tr>
+<td>段階2 選ぶ</td>
+<td>自分に合うスキルを選ぶ</td>
+</tr>
+<tr>
+<td>段階3 伸ばす</td>
+<td>AIでYouTubeを伸ばし、広告収益・アフィリエイトへ</td>
+</tr>
+<tr>
+<td>段階4 つくる</td>
+<td>実績をもとに商品をつくる</td>
+</tr>
+<tr>
+<td>段階5 売る</td>
+<td>商品（スキル）を売る</td>
+</tr>
+</tbody>
+</table></div>
+<p>まだ何も始めていない人は、段階1から始めます。上の段階ほど偉いわけではありません。いまの場所が分かれば、次にやることが1つに絞れます。</p>
+<h2 id="10">10問に答える</h2>
+<p>上から順に答えてください。迷ったら「いいえ」にします。</p>
+<style>
+.dg fieldset{border:1px solid var(--border);border-radius:12px;margin:0 0 12px;padding:12px 14px;background:var(--card)}
+.dg legend{font-weight:700;padding:0 6px;line-height:1.6}
+.dg .st{display:block;font-size:12px;color:var(--muted);font-weight:400}
+.dg label{display:inline-flex;align-items:center;gap:6px;margin:8px 18px 0 0;padding:8px 14px;border:1px solid var(--border);border-radius:999px;cursor:pointer;font-size:15px}
+.dg input{width:18px;height:18px;margin:0}
+.dg .acts{margin:16px 0 8px;display:flex;flex-wrap:wrap;gap:10px}
+.dg button{font:inherit;font-weight:700;padding:10px 18px;border-radius:10px;border:0;color:#fff;background:var(--btn);cursor:pointer}
+.dg button.ghost{background:transparent;color:var(--link);border:1px solid var(--border)}
+.dg #dg-result{display:none;margin:12px 0 8px;padding:16px 18px;border:2px solid var(--accent);border-radius:12px;background:var(--card)}
+.dg #dg-result h3{margin:0 0 8px}
+.dg #dg-result p{margin:6px 0}
+.dg .warn{color:var(--muted);font-size:14px}
+@media print{header.site,.toc,nav.pn,footer.site,.crumb,article .hero .btn,.dg .acts,#cta-start,#cta-start~*{display:none!important}.dg fieldset{break-inside:avoid}.dg #dg-result{display:block}}
+</style>
+
+<form class="dg" id="dg" onsubmit="return false">
+<fieldset><legend><span class="st">段階1 学ぶ</span>Q1. AIで、台本・サムネ・編集のどれか1つを作ったことがある</legend><label><input type="radio" name="q1" value="1">はい</label><label><input type="radio" name="q1" value="0">いいえ</label></fieldset>
+<fieldset><legend><span class="st">段階1 学ぶ</span>Q2. AIでYouTubeを回している人のやり方を、1つ以上なぞってみた</legend><label><input type="radio" name="q2" value="1">はい</label><label><input type="radio" name="q2" value="0">いいえ</label></fieldset>
+<fieldset><legend><span class="st">段階2 選ぶ</span>Q3. 自分が答えられる「誰の、どの悩みか」を1文で言える</legend><label><input type="radio" name="q3" value="1">はい</label><label><input type="radio" name="q3" value="0">いいえ</label></fieldset>
+<fieldset><legend><span class="st">段階2 選ぶ</span>Q4. 台本・サムネ・編集のうち、自分でやる所とAIに任せる所を決めている</legend><label><input type="radio" name="q4" value="1">はい</label><label><input type="radio" name="q4" value="0">いいえ</label></fieldset>
+<fieldset><legend><span class="st">段階3 伸ばす</span>Q5. YouTube に動画を公開していて、次の1本も作っている</legend><label><input type="radio" name="q5" value="1">はい</label><label><input type="radio" name="q5" value="0">いいえ</label></fieldset>
+<fieldset><legend><span class="st">段階3 伸ばす</span>Q6. 反応（クリックされない・最初で離れる・コメント）を見て、1本の1か所を直したことがある</legend><label><input type="radio" name="q6" value="1">はい</label><label><input type="radio" name="q6" value="0">いいえ</label></fieldset>
+<fieldset><legend><span class="st">段階4 つくる</span>Q7. 動画や発信で、人に見せられる実績（自分の結果や、見た人の反応）がある</legend><label><input type="radio" name="q7" value="1">はい</label><label><input type="radio" name="q7" value="0">いいえ</label></fieldset>
+<fieldset><legend><span class="st">段階4 つくる</span>Q8. 自分の商品（記事・動画講座・1対1の相談など）の中身を決めた、または作っている</legend><label><input type="radio" name="q8" value="1">はい</label><label><input type="radio" name="q8" value="0">いいえ</label></fieldset>
+<fieldset><legend><span class="st">段階5 売る</span>Q9. 自分の商品を、買ってもらったことがある</legend><label><input type="radio" name="q9" value="1">はい</label><label><input type="radio" name="q9" value="0">いいえ</label></fieldset>
+<fieldset><legend><span class="st">段階5 売る</span>Q10. 買ってくれた次の人に届ける流れ（告知・申し込み・その後のフォロー）を決めている</legend><label><input type="radio" name="q10" value="1">はい</label><label><input type="radio" name="q10" value="0">いいえ</label></fieldset>
+<div class="acts"><button type="button" id="dg-go">結果を見る</button><button type="button" class="ghost" id="dg-print">印刷・PDFで保存</button><button type="button" class="ghost" id="dg-reset">答え直す</button></div>
+<div id="dg-result" aria-live="polite"></div>
+</form>
+
+<script>
+(function(){
+  var ST=["段階1 学ぶ","段階1 学ぶ","段階2 選ぶ","段階2 選ぶ","段階3 伸ばす","段階3 伸ばす","段階4 つくる","段階4 つくる","段階5 売る","段階5 売る"];
+  var NEXT=[
+    "AIで台本を1本だけ作ってみる。サムネや編集までそろえなくていい",
+    "AIでYouTubeを回している人の動画を1本選び、その手順を1つだけ真似してみる",
+    "YouTube企画リサーチAI社員に届けたい相手を1行で渡し、出てきた企画10本から、自分が答えられる1本を選ぶ",
+    "台本・サムネ・編集のうち、自分が続けられない工程を1つ決めて、そこをAIに任せる",
+    "企画リサーチAI社員で選んだ1本を、まず公開する。完璧にしてから出そうとしない",
+    "直近の動画1本の、タイトルかサムネを書き直す。全部は変えず、1か所だけ",
+    "見た人の反応（コメント・質問）や自分の結果を、1つメモにまとめる。これが商品の材料になる",
+    "動画で一番反応があったテーマで、自分の商品の形（記事・動画講座・1対1）を1つ決める",
+    "商品の案内を、動画の概要欄か固定コメントに1行入れる",
+    "買ってくれた人に感想を聞き、次の人への案内文に1行足す"];
+  var f=document.getElementById("dg"),out=document.getElementById("dg-result");
+  function show(){
+    var miss=[],first=-1;
+    for(var i=1;i<=10;i++){var c=f.querySelector('input[name="q'+i+'"]:checked');if(!c){miss.push("Q"+i);continue;}if(first<0&&c.value==="0"){first=i-1;}}
+    var h;
+    if(first<0&&miss.length===0){
+      h="<h3>あなたの現在地: 段階5 売る（続けている）</h3><p>10問すべて「はい」です。売る流れができています。</p><p><b>次の1つ:</b> いちばん反応があった動画のテーマで、次の1本を企画する。段階3に戻って伸ばすほど、売る相手も増えます。</p>";
+    }else if(first<0){
+      h="<p class='warn'>まだ答えていない質問があります: "+miss.join("・")+"</p>";
+    }else{
+      h="<h3>あなたの現在地: "+ST[first]+"</h3><p>Q"+(first+1)+"が最初の「いいえ」でした。</p><p><b>次の1つ:</b> "+NEXT[first]+"</p>"+(miss.length?"<p class='warn'>未回答: "+miss.join("・")+"（結果は最初の「いいえ」までで決まります）</p>":"");
+    }
+    out.innerHTML=h+"<p class='warn'>※成果には個人差があります。この診断は、次にやることを1つに絞るためのものです。</p>";
+    out.style.display="block";
+  }
+  document.getElementById("dg-go").onclick=show;
+  document.getElementById("dg-print").onclick=function(){show();window.print();};
+  document.getElementById("dg-reset").onclick=function(){f.reset();out.style.display="none";out.innerHTML="";};
+})();
+</script>
+
+<h2 id="_1">結果の読み方（画面で答えられないとき・印刷するとき）</h2>
+<p>上から順に見て、<strong>最初に「いいえ」になった質問の段階が、あなたの現在地</strong>です。その質問の右側が「次の1つ」です。全部「はい」なら段階5です。</p>
+<div class='tbl'><table>
+<thead>
+<tr>
+<th>質問</th>
+<th>段階</th>
+<th>「いいえ」なら、次の1つ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Q1. AIで台本・サムネ・編集のどれか1つを作った</td>
+<td>段階1 学ぶ</td>
+<td>AIで台本を1本だけ作ってみる。サムネや編集までそろえなくていい</td>
+</tr>
+<tr>
+<td>Q2. AIでYouTubeを回している人のやり方をなぞった</td>
+<td>段階1 学ぶ</td>
+<td>その人の動画を1本選び、手順を1つだけ真似してみる</td>
+</tr>
+<tr>
+<td>Q3. 「誰の、どの悩みか」を1文で言える</td>
+<td>段階2 選ぶ</td>
+<td>企画リサーチAI社員に届けたい相手を1行で渡し、企画10本から自分が答えられる1本を選ぶ</td>
+</tr>
+<tr>
+<td>Q4. 自分でやる所とAIに任せる所を決めている</td>
+<td>段階2 選ぶ</td>
+<td>続けられない工程を1つ決めて、そこをAIに任せる</td>
+</tr>
+<tr>
+<td>Q5. 動画を公開していて、次の1本も作っている</td>
+<td>段階3 伸ばす</td>
+<td>選んだ1本を、まず公開する。完璧にしてから出そうとしない</td>
+</tr>
+<tr>
+<td>Q6. 反応を見て、1本の1か所を直した</td>
+<td>段階3 伸ばす</td>
+<td>直近の動画1本の、タイトルかサムネを書き直す</td>
+</tr>
+<tr>
+<td>Q7. 人に見せられる実績がある</td>
+<td>段階4 つくる</td>
+<td>見た人の反応や自分の結果を、1つメモにまとめる</td>
+</tr>
+<tr>
+<td>Q8. 自分の商品の中身を決めた</td>
+<td>段階4 つくる</td>
+<td>一番反応があったテーマで、商品の形を1つ決める</td>
+</tr>
+<tr>
+<td>Q9. 自分の商品を買ってもらった</td>
+<td>段階5 売る</td>
+<td>商品の案内を、概要欄か固定コメントに1行入れる</td>
+</tr>
+<tr>
+<td>Q10. 次の人に届ける流れを決めている</td>
+<td>段階5 売る</td>
+<td>買ってくれた人に感想を聞き、案内文に1行足す</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="_2">この結果の使い方</h2>
+<ul>
+<li><strong>次の1つだけやる</strong>: 一度に全部やろうとしない。1つ終わったら、もう一度この診断に答えます</li>
+<li><strong>AI社員と組み合わせる</strong>: 段階1〜3の「次の1つ」は、一緒に届いた YouTube企画リサーチAI社員でそのまま始められます</li>
+<li><strong>個別ロードマップ作成会で使う</strong>: 作成会では、この診断の結果から話を始めます。「印刷・PDFで保存」で結果を残して、当日手元に置いてください</li>
+</ul>
+<h2 id="ai">最新AIが出たときも、段階は変わらない</h2>
+<p>新しいAIが出ると、台本・サムネ・編集の手間は減ります。それでも「誰の、どの悩みに答えるか」を決めるのと、反応を見て1か所ずつ直すのは自分です。段階の順番はそのままで、使うAIだけ入れ替えてください。AIの名前・料金・使える範囲は変わるので、使う前に各社の公式サイトで確かめてください。</p>
+<p>段階ごとの金額の目安は書いていません。どれだけ収益になるかは、テーマと続け方で変わります。</p>
+<p>※成果には個人差があります。特典の内容は予告なく変わることがあります。</p>
+<div id="cta-start"></div>
+
+<hr />
+<p>AIに仕事を渡せるようになると、手元に時間が残ります。次に考えるのは、その時間で何を作って、どう収益にするかです。</p>
+<p>そうなった時に、わどAIスクールを思い出してもらえたらうれしいです。</p>
+<p>下のLINEに友だち追加すると、0からAIで月100万までのロードマップを52分にまとめた限定動画が届きます。合言葉を送る必要はありません。AIツールを触った先で、どう収益へつなぐかの全体像を先に押さえたい人はこちらから。<br />
+▶ LINE 友だち追加　 <a href="https://bit.ly/46ioegH">https://bit.ly/46ioegH</a></p>
+<p><img alt="0からAIで月100万までのロードマップ動画のご案内" src="../img/N58_cta1.png" /></p>
+<p>個別ロードマップ作成会に来てくれた人限定で、豪華50大特典を渡しています。</p>
+<p>0から100までのロードマップ説明動画、AIツールの使い方をまとめた無料の会員サイト、AIの実例やマネタイズの方法まで詰め込んだ50個のコンテンツが全部もらえます。AIツールをビジネスに使うための素材が揃っています。</p>
+<p><img alt="豪華50大特典のご案内" src="../img/N58_cta2.png" /></p>
+<p>個別ロードマップ作成会でできること：</p>
+<p>60分、Zoomで1対1。話すのは参加者ひとりのことだけです。</p>
+<ul>
+<li>これまでの経験・失敗・いまの強みを、直接聞いて棚卸し</li>
+<li>「本当はこうなりたい」から逆算して、現在地から収益までの一本道をその場でロードマップに</li>
+<li>コンテンツ販売か、AIを使った運用代行か。商品がなくても進める方向性まで一緒に決める</li>
+<li>話した内容はまとめて、振り返りとして後から送る</li>
+</ul>
+<p><img alt="個別ロードマップ作成会のご案内" src="../img/N58_cta3.png" /></p>
+<p>▶ LINE 友だち追加　 <a href="https://bit.ly/46ioegH">https://bit.ly/46ioegH</a></p>
+<p>羊軍団で待ってますね🐑</p></div>
+<nav class='pn'>
+<a href='../bonus-N57/'>← YouTube企画リサーチAI社員</a>
+<span>（最後の特典）</span>
+</nav></article></main>
+<footer class='site'><div class='wrap'><p>この特典は受け取り条件を満たした方向けに配布しています。再配布・転載はご遠慮ください。</p><p>記載の売上・成果は特定の実績であり、同様の成果を保証するものではありません。</p></div></footer></body></html>

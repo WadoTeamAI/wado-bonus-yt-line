@@ -17,6 +17,10 @@ header.site p{margin:0;opacity:.9;font-size:15px}
 .card h2{font-size:17px;margin:0;line-height:1.45}
 .card p{margin:0;font-size:13.5px;color:var(--muted);flex:1}
 .btn{display:inline-block;text-align:center;padding:10px 16px;border-radius:10px;font-weight:700;text-decoration:none;color:#fff;background:var(--btn)}
+.btn.dl{display:block;width:100%;max-width:440px;min-height:56px;margin:12px 0;padding:14px 18px;box-sizing:border-box;border-radius:14px;box-shadow:0 3px 0 rgba(0,0,0,.18)}
+.btn.dl:active{transform:translateY(2px);box-shadow:0 1px 0 rgba(0,0,0,.18)}
+.dl-main{display:block;font-size:18px;line-height:1.3}
+.dl-sub{display:block;font-size:12px;font-weight:400;opacity:.9;margin-top:4px;word-break:break-all}
 .btn.dis{background:var(--muted);pointer-events:none}
 .btn.ghost{background:transparent;color:var(--link);border:1px solid var(--border)}
 article{padding:28px 0 48px}
@@ -58,7 +62,7 @@ footer.site p{margin:4px 0}
 </style></head><body>
 <header class='site'><div class='wrap'><span class='stamp'>YOUTUBE AI TEAM</span><h1 style=font-size:20px>AI社員を雇って、YouTubeチームを持とう｜LINE登録特典</h1></div></header>
 <main class='wrap'><p class='crumb'><a href='../'>← 一覧へ戻る</a></p><article>
-<div class='hero'><div><img src='../img/N57.png' alt='YouTube企画リサーチAI社員' style='border-radius:12px'></div><div><div class='tags'><span class='tag k'>新規</span><span class='tag'>チャネルOS</span><span class='tag'>Skill</span><span class='tag'>LINE登録特典</span></div><h1>YouTube企画リサーチAI社員</h1><p class='lead'>伸びている動画の型を3つに分け、あなたが答えられる企画を10本</p><a class='btn' href='../files/yt-dept-planning.zip' download style='margin:0 8px 8px 0'>Skill（zip）をダウンロード（yt-dept-planning.zip）</a></div></div>
+<div class='hero'><div><img src='../img/N57.png' alt='YouTube企画リサーチAI社員' style='border-radius:12px'></div><div><div class='tags'><span class='tag k'>新規</span><span class='tag'>チャネルOS</span><span class='tag'>Skill</span><span class='tag'>LINE登録特典</span></div><h1>YouTube企画リサーチAI社員</h1><p class='lead'>伸びている動画を自分で集めて判定し、あなたが答えられる企画を10本（採点つき）</p><a class='btn dl' href='../files/yt-dept-planning.zip' download><span class='dl-main'>⬇ タップしてダウンロード</span><span class='dl-sub'>タップするとファイル（yt-dept-planning.zip）が保存されます</span></a></div></div>
 <div class='toc'><b>目次</b><div class="toc">
 <ul>
 <li><a href="#_1">この特典の進め方</a></li>
@@ -80,7 +84,7 @@ footer.site p{margin:4px 0}
 </div>
 <div class='body'><h1 id="youtubeai">YouTube企画リサーチAI社員</h1>
 <blockquote>
-<p>YouTubeの企画出しと競合リサーチをする。貼られた反応データから「伸びている型」と企画10本・タイトル案を出す。</p>
+<p>YouTubeの企画出しと競合リサーチをする。届けたい相手の検索語で伸びている動画を自分で集め（Web検索。yt-dlpやYouTube APIがあれば正確な数字）、再生数÷登録者数などで「伸びている」を判定し、企画10本を採点してタイトル案（10の型）と選ぶ1本を出す。</p>
 </blockquote>
 <h2 id="_1">この特典の進め方</h2>
 <p>上から順に進めます。AIは下書きと候補を出します。どれを使うか、どこを直すかはあなたが決めます。</p>
@@ -89,7 +93,7 @@ footer.site p{margin:4px 0}
 <h2 id="_2">入れ方</h2>
 <p>上のボタンから zip をダウンロードします。中身は <code>yt-dept-planning</code> というフォルダ1つです。</p>
 <ul>
-<li><strong>YouTube企画リサーチAI社員</strong>（<code>yt-dept-planning.zip</code>）: YouTubeの企画出しと競合リサーチをする。貼られた反応データから「伸びている型」と企画10本・タイトル案を出す。</li>
+<li><strong>YouTube企画リサーチAI社員</strong>（<code>yt-dept-planning.zip</code>）: YouTubeの企画出しと競合リサーチをする。届けたい相手の検索語で伸びている動画を自分で集め（Web検索。yt-dlpやYouTube APIがあれば正確な数字）、再生数÷登録者数などで「伸びている」を判定し、企画10本を採点してタイトル案（10の型）と選ぶ1本を出す。</li>
 </ul>
 <h3 id="claude-code">Claude Code を使っている場合</h3>
 <ol>
@@ -145,6 +149,21 @@ footer.site p{margin:4px 0}
 <td><code>references/planning-criteria.md</code></td>
 <td>企画の判断基準</td>
 </tr>
+<tr>
+<td>リファレンス</td>
+<td><code>references/research-method.md</code></td>
+<td>リサーチの方法（材料を自分で集める）</td>
+</tr>
+<tr>
+<td>リファレンス</td>
+<td><code>references/title-patterns.md</code></td>
+<td>タイトルの型（10個）</td>
+</tr>
+<tr>
+<td>リファレンス</td>
+<td><code>references/video-formats.md</code></td>
+<td>企画の型（8個）</td>
+</tr>
 </tbody>
 </table></div>
 <p>出力の形は「正しいアウトプット」（完成見本）にそろえて出てきます。見本と並べて、どこを直すかを決めてください。</p>
@@ -173,7 +192,7 @@ footer.site p{margin:4px 0}
 <p>この特典は、セミナー「AIエージェント × 完全YouTube攻略 0→100ロードマップセミナー」の企画でお届けしています。</p>
 <p>セミナーのご案内は、企画のオープンチャットにまとめています。</p>
 <p><a href="https://line.me/ti/g2/XwfWeJRx4pIp7VlHv3ESOuFbvvBgRmcS76PWSQ?utm_source=invitation&utm_medium=link_copy&utm_campaign=default"><img src="../img/N57_openchat.png" alt="AIエージェント × 完全YouTube攻略 0→100ロードマップセミナー" style="max-width:360px;width:100%;margin:0 auto;border-radius:12px"></a></p>
-<p>▶ <a href="https://line.me/ti/g2/XwfWeJRx4pIp7VlHv3ESOuFbvvBgRmcS76PWSQ?utm_source=invitation&amp;utm_medium=link_copy&amp;utm_campaign=default">オープンチャットに参加する</a></p></div>
+<p><a class="btn dl" href="https://line.me/ti/g2/XwfWeJRx4pIp7VlHv3ESOuFbvvBgRmcS76PWSQ?utm_source=invitation&utm_medium=link_copy&utm_campaign=default"><span class="dl-main">💬 タップしてオープンチャットに参加</span><span class="dl-sub">タップすると LINE が開き、オープンチャットの参加画面に移ります</span></a></p></div>
 <nav class='pn'>
 <span>（最初の特典）</span>
 <a href='../bonus-N58/'>YouTube 0→100ロードマップ 現在地診断 →</a>

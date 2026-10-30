@@ -59,6 +59,34 @@ footer.site p{margin:4px 0}
 .lib .note{font-size:13px;color:var(--muted);margin:4px 0 0}
 
 :root{--bg:#f5f3ff;--card:#fff;--text:#374151;--muted:#6b7280;--link:#4f46e5;--border:#e5e7eb;--accent:#6366f1;--btn:linear-gradient(90deg,#6366f1,#a855f7);--hero:linear-gradient(120deg,#1e1b4b,#6366f1 60%,#a855f7);--ph:linear-gradient(135deg,#1e1b4b,#6366f1);--tagbg:#eef2ff;--tagfg:#4338ca;--shadow:0 8px 24px rgba(30,27,75,.08);--pre:#f3f4f6}
+/* yt-line（LINE登録特典）の装飾の上乗せ。2026-10-30 中井「文字の大きさ・装飾・豪華に」。260912_配布サイト構成.yaml の theme_css で読む */
+article h1{font-size:28px;letter-spacing:.02em;background:linear-gradient(90deg,#4338ca,#a855f7);-webkit-background-clip:text;background-clip:text;color:transparent}
+article .lead{font-size:16px}
+.body{font-size:17px;line-height:1.95}
+.body p{margin:14px 0}
+.body>h1:first-of-type{display:none}
+.body h2{font-size:22px;margin:52px 0 16px;padding:14px 18px;border:0;border-radius:14px;color:#fff;background:linear-gradient(110deg,#312e81,#6366f1 55%,#a855f7);box-shadow:0 6px 18px rgba(99,102,241,.25);line-height:1.45}
+.body h3{font-size:19px;margin:32px 0 10px;padding:2px 0 2px 14px;border-left:6px solid #a855f7;line-height:1.5}
+.body strong{background:linear-gradient(transparent 58%,#c7f9f1 58%);padding:0 2px}
+.body blockquote{margin:20px 0;padding:18px 20px;border:0;border-radius:16px;background:linear-gradient(#fff,#fff) padding-box,linear-gradient(120deg,#6366f1,#a855f7,#7FE7DC) border-box;border:2px solid transparent;font-size:17.5px;font-weight:600;color:#312e81}
+.body blockquote p{margin:0}
+.body img{border-radius:16px;box-shadow:0 8px 24px rgba(49,46,129,.14);margin:20px auto 6px}
+.body .cap{margin:0 0 22px;font-size:13.5px;color:var(--muted);text-align:center}
+.body table{font-size:15px;border-radius:12px;overflow:hidden;box-shadow:0 2px 10px rgba(49,46,129,.08);background:#fff}
+.body th{background:linear-gradient(90deg,#4338ca,#7c3aed);padding:10px 10px;font-size:14px}
+.body td{padding:10px 10px}
+.body tr:nth-child(even) td{background:#f8f7ff}
+.body ul,.body ol{padding-left:1.4em}
+.body li{margin:6px 0}
+.body .box{margin:22px 0;padding:16px 18px 14px;border-radius:14px;background:#fff;border:1px solid #e0e7ff;box-shadow:0 2px 10px rgba(49,46,129,.06)}
+.body .box>b:first-child{display:inline-block;margin:0 0 6px;padding:2px 12px;border-radius:999px;font-size:13px;letter-spacing:.06em;color:#fff;background:linear-gradient(90deg,#6366f1,#a855f7)}
+.body .box.warn>b:first-child{background:#f59e0b}
+.body .box p{margin:6px 0}
+.body .goal{margin:18px 0;padding:18px 20px;border-radius:16px;background:linear-gradient(120deg,#eef2ff,#faf5ff);border:2px dashed #a5b4fc;font-size:18px;font-weight:700;color:#312e81;text-align:center}
+.body .btn.dl,.hero .btn.dl{margin:16px auto}
+.body a[href^="https://line.me"] img{box-shadow:0 8px 24px rgba(6,199,85,.18)}
+.toc{border-radius:16px;border:1px solid #e0e7ff}
+@media(max-width:480px){.body{font-size:16.5px}.body h2{font-size:19.5px;padding:12px 14px}.body h3{font-size:17.5px}article h1{font-size:23px}.body table{font-size:13.5px}}
 </style></head><body>
 <header class='site'><div class='wrap'><span class='stamp'>YOUTUBE AI TEAM</span><h1 style=font-size:20px>AI社員を雇って、YouTubeチームを持とう｜LINE登録特典</h1></div></header>
 <main class='wrap'><p class='crumb'><a href='../'>← 一覧へ戻る</a></p><article>
@@ -76,9 +104,11 @@ footer.site p{margin:4px 0}
 <li><a href="#zip">zip の中身</a></li>
 <li><a href="#ai">このあと届くAI社員</a></li>
 <li><a href="#1-10">もう1つの特典: いまの段階を10問で確かめる</a></li>
+<li><a href="#3">うまく使う3つのコツ</a></li>
+<li><a href="#_3">つまずいたとき</a></li>
 <li><a href="#ai_1">最新AIが出たときの使い方</a></li>
 <li><a href="#ai_2">AIに任せる所／自分で決める所</a></li>
-<li><a href="#_3">次の一歩: セミナーのオープンチャットに参加する</a></li>
+<li><a href="#_4">次の一歩: セミナーのオープンチャットに参加する</a></li>
 </ul>
 </div>
 </div>
@@ -86,10 +116,22 @@ footer.site p{margin:4px 0}
 <blockquote>
 <p>YouTubeの企画出しと競合リサーチをする。届けたい相手の検索語で伸びている動画を自分で集め（Web検索。yt-dlpやYouTube APIがあれば正確な数字）、再生数÷登録者数などで「伸びている」を判定し、企画10本を採点してタイトル案（10の型）と選ぶ1本を出す。</p>
 </blockquote>
+<p><img alt="企画リサーチAI社員の仕事を5つの手順で示した図解。検索語を決める、伸びている動画を集める、再生数÷登録者数で判定、企画10本を採点、撮る1本を選ぶ" src="../img/N57_fig1_flow.png" /></p>
+<p class="cap">1回の依頼で、AI社員がやること</p>
+
+<div class="box">
+<p><b>この特典でできること</b></p>
+<ul>
+<li>届けたい相手が検索しそうな言葉で、いま伸びている動画を集める</li>
+<li>「再生数÷登録者数」で、チャンネルの大きさのわりに伸びている動画を見分ける</li>
+<li>企画10本を採点して、タイトル案と「撮る1本」まで決める</li>
+</ul>
+</div>
 <h2 id="_1">この特典の進め方</h2>
 <p>上から順に進めます。AIは下書きと候補を出します。どれを使うか、どこを直すかはあなたが決めます。</p>
 <h2 id="1">最初のゴール（今日やる1つ）</h2>
-<p><strong>AI社員に1回話しかけて、自分のチャンネルの話で返事が返ってくる状態にする。</strong></p>
+<div class="goal">AI社員に1回話しかけて、自分のチャンネルの話で返事が返ってくる状態にする</div>
+
 <h2 id="_2">入れ方</h2>
 <p>上のボタンから zip をダウンロードします。中身は <code>yt-dept-planning</code> というフォルダ1つです。</p>
 <ul>
@@ -114,6 +156,9 @@ footer.site p{margin:4px 0}
 <h3 id="1_1">1分の動作確認</h3>
 <p>「届けたい相手は『副業で動画を始めたい会社員』です。企画を10本出して」のように話しかけます。足りない情報があれば、AI社員の方から質問が返ってきます。質問が返ってくれば動いています。</p>
 <h2 id="zip">zip の中身</h2>
+<p><img alt="AI社員1人の中身を示した図解。ワークフロー、ナレッジ、リファレンス、完成見本の4つがzipに入っている" src="../img/N57_fig2_inside.png" /></p>
+<p class="cap">zip の中身は4種類。表のファイルが、この4つのどれかに入ります</p>
+
 <p>AI社員1人は、判断の基準・型・手順・完成見本でできています。このAI社員の中身は次のとおりです。</p>
 <div class='tbl'><table>
 <thead>
@@ -169,6 +214,9 @@ footer.site p{margin:4px 0}
 <p>出力の形は「正しいアウトプット」（完成見本）にそろえて出てきます。見本と並べて、どこを直すかを決めてください。</p>
 <p><code>output/</code> には、このAI社員を、わどのYouTubeチャンネル「わどAIマネタイズ」の材料で実際に動かした成果物が入っています（競合のチャンネル名・数字は伏せています）。どんな形で返ってくるかを、使う前に見られます。</p>
 <h2 id="ai">このあと届くAI社員</h2>
+<p><img alt="YouTube部署のAI社員の図解。LINE登録で企画リサーチ、オープンチャット参加で分析と公開前チェック、セミナー参加で台本・サムネ・編集が届く" src="../img/N57_fig3_team.png" /></p>
+<p class="cap">いまは1人目。場面ごとにAI社員が増えていきます</p>
+
 <p>企画リサーチAI社員は、YouTube部署の1人目です。次の場面で、AI社員がさらに増えます。</p>
 <ul>
 <li><strong>セミナー用オープンチャットに参加</strong>: YouTube分析AI社員・YouTube公開前チェックAI社員</li>
@@ -179,6 +227,46 @@ footer.site p{margin:4px 0}
 <p>LINE登録特典には「YouTube 0→100ロードマップ 現在地診断」も入っています。10問に「はい・いいえ」で答えると、いまの段階と次にやる1つが分かります。</p>
 <p><a href="../bonus-N58/">現在地診断を開く</a></p>
 <p>まだジャンルを決めていない人は、「YouTube 今伸びているジャンル一覧＋選び方」で候補を3つに絞ってから、このAI社員に渡してください（<a href="../bonus-N72/">ジャンル一覧を開く</a>）。</p>
+<h2 id="3">うまく使う3つのコツ</h2>
+<ol>
+<li><strong>届けたい相手は1人に絞る。</strong> 「会社員」より「副業で動画を始めたい30代の会社員」のほうが、集まる動画も企画もぶれません</li>
+<li><strong>自分の経験を1行添える。</strong> 「料理は10年毎日作っている」のように書くと、あなたが答えられる企画に寄せて出てきます</li>
+<li><strong>10本を全部撮ろうとしない。</strong> 採点の上位から「これなら撮れる」1本だけ選び、まず出します</li>
+</ol>
+<div class="box">
+<p><b>話しかける文の例</b></p>
+<pre><code class="language-text">届けたい相手は「副業で動画を始めたい30代の会社員」です。
+私の経験: 本業で営業を8年やっている
+伸びている動画を集めて、企画を10本出してください。最後に、私が撮るならどの1本か教えてください。
+</code></pre>
+</div>
+<h2 id="_3">つまずいたとき</h2>
+<div class='tbl'><table>
+<thead>
+<tr>
+<th>こんなとき</th>
+<th>やること</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/yt-dept-planning</code> が候補に出ない</td>
+<td>Claude Code を開き直します。それでも出ないときは、<code>~/.claude/skills/yt-dept-planning/SKILL.md</code> の形になっているか確かめます（展開でフォルダが二重になることがあります）</td>
+</tr>
+<tr>
+<td>claude.ai で Skills の項目が見つからない</td>
+<td>公式ヘルプで「Skills」を検索します。プランや画面の名前は変わることがあります</td>
+</tr>
+<tr>
+<td>再生数・登録者数が出てこない</td>
+<td>Web検索が使えない環境では数字が取れないことがあります。「分かる範囲で、分からない数字は不明と書いて」と頼み直します</td>
+</tr>
+<tr>
+<td>企画が自分に合わない</td>
+<td>経験を1行足して、もう一度頼みます。届けたい相手を変えるのも手です</td>
+</tr>
+</tbody>
+</table></div>
 <h2 id="ai_1">最新AIが出たときの使い方</h2>
 <p>AI社員の指示文は、特定のモデルに合わせて書いていません。新しいモデルが出ても、手順はそのままで使えます。モデルの名前・料金・使える範囲は変わるので、使う前に各社の公式サイトで確かめてください。モデルの差より、どの1本のどこを直すかで結果が変わります。</p>
 <h2 id="ai_2">AIに任せる所／自分で決める所</h2>
@@ -187,13 +275,14 @@ footer.site p{margin:4px 0}
 <li>自分で決める所: 誰に届けるか、どの案を使うか、数字や実績として何を出すか</li>
 </ul>
 <p>AIは数字や実績を作りません。出したい実績は、自分で出典を確かめてから渡してください。</p>
+<p>このページの図解は、2026年10月に画像生成AIで作り、文字と内容を目で確かめています。</p>
 <p>※成果には個人差があります。特典の内容は予告なく変わることがあります。</p>
 <hr />
-<h2 id="_3">次の一歩: セミナーのオープンチャットに参加する</h2>
+<h2 id="_4">次の一歩: セミナーのオープンチャットに参加する</h2>
 <p>この特典は、セミナー「AIエージェント × 完全YouTube攻略 0→100ロードマップセミナー」の企画でお届けしています。</p>
 <p>セミナーのご案内は、企画のオープンチャットにまとめています。</p>
 <p><a href="https://line.me/ti/g2/XwfWeJRx4pIp7VlHv3ESOuFbvvBgRmcS76PWSQ?utm_source=invitation&utm_medium=link_copy&utm_campaign=default"><img src="../img/N57_openchat.png" alt="AIエージェント × 完全YouTube攻略 0→100ロードマップセミナー" style="max-width:360px;width:100%;margin:0 auto;border-radius:12px"></a></p>
-<p><a class="btn dl" href="https://line.me/ti/g2/XwfWeJRx4pIp7VlHv3ESOuFbvvBgRmcS76PWSQ?utm_source=invitation&utm_medium=link_copy&utm_campaign=default"><span class="dl-main">💬 タップしてオープンチャットに参加</span><span class="dl-sub">タップすると LINE が開き、オープンチャットの参加画面に移ります</span></a></p></div>
+<p><a class="btn dl" style="margin:16px auto" href="https://line.me/ti/g2/XwfWeJRx4pIp7VlHv3ESOuFbvvBgRmcS76PWSQ?utm_source=invitation&utm_medium=link_copy&utm_campaign=default"><span class="dl-main">💬 タップしてオープンチャットに参加</span><span class="dl-sub">タップすると LINE が開き、オープンチャットの参加画面に移ります</span></a></p></div>
 <nav class='pn'>
 <span>（最初の特典）</span>
 <a href='../bonus-N58/'>YouTube 0→100ロードマップ 現在地診断 →</a>

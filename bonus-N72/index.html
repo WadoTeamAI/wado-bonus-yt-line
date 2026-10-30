@@ -78,8 +78,8 @@ footer.site p{margin:4px 0}
 </ul>
 </li>
 <li><a href="#3">自分に合うジャンルの選び方（3問）</a><ul>
-<li><a href="#_4">記入表</a></li>
-<li><a href="#3_1">候補3つの決め方</a></li>
+<li><a href="#_4">記入表（入力すると自動で保存・集計）</a></li>
+<li><a href="#3_1">候補3つの決め方（記入表はこの順で自動で並べます）</a></li>
 </ul>
 </li>
 <li><a href="#ai">次の一歩: 候補を企画リサーチAI社員に渡す</a></li>
@@ -318,7 +318,7 @@ footer.site p{margin:4px 0}
 <p>C段のジャンルでも、あなたに経験があれば候補から外さなくて大丈夫です。根拠が少ないジャンルは、企画リサーチAI社員で自分の検索語を使って測り直してください。</p>
 <h2 id="3">自分に合うジャンルの選び方（3問）</h2>
 <p>ジャンルは、伸びているかより続けられるかで決めます。30本目で手が止まると、そこでチャンネルが止まるからです。</p>
-<p>ジャンルは、3つの質問の点数で選びます。一覧から気になるジャンルを5つまで選び、それぞれに点を付けてください。紙に書くか、このページを印刷して使えます。</p>
+<p>ジャンルは、3つの質問の点数で選びます。一覧から気になるジャンルを5つまで選び、下の記入表で点を付けてください。点を付けると合計が出て、「候補3つを出す」で候補とAI社員に渡す文ができあがります。</p>
 <p><strong>Q1. 続けられるか</strong>（30本作るところを想像する）</p>
 <ul>
 <li>2点: ネタが30本すぐ思い浮かぶ。作るのが楽しい</li>
@@ -337,62 +337,118 @@ footer.site p{margin:4px 0}
 <li>1点: 売られていそうだが、見たことはない</li>
 <li>0点: 思い当たらない</li>
 </ul>
-<h3 id="_4">記入表</h3>
-<div class='tbl'><table>
-<thead>
-<tr>
-<th>気になるジャンル</th>
-<th>段（A/B/C）</th>
-<th>Q1 続けられる</th>
-<th>Q2 経験</th>
-<th>Q3 買う人</th>
-<th>合計</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table></div>
-<h3 id="3_1">候補3つの決め方</h3>
+<h3 id="_4">記入表（入力すると自動で保存・集計）</h3>
+<style>
+.gs .row{border:1px solid var(--border);border-radius:12px;margin:0 0 12px;padding:12px 14px;background:var(--card)}
+.gs .row b{display:block;margin:0 0 6px}
+.gs select,.gs input[type=text]{font:inherit;width:100%;box-sizing:border-box;padding:8px 10px;border:1px solid var(--border);border-radius:8px;margin:0 0 8px;background:var(--card);color:inherit}
+.gs .q{display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px;margin:4px 0}
+.gs .q span{min-width:7em;font-size:14px}
+.gs .q label{display:inline-flex;align-items:center;gap:4px;padding:4px 10px;border:1px solid var(--border);border-radius:999px;font-size:14px;cursor:pointer}
+.gs .tot{font-size:14px;color:var(--muted);margin:6px 0 0}
+.gs .acts{margin:16px 0 8px;display:flex;flex-wrap:wrap;gap:10px}
+.gs button{font:inherit;font-weight:700;padding:10px 18px;border-radius:10px;border:0;color:#fff;background:var(--btn);cursor:pointer}
+.gs button.ghost{background:transparent;color:var(--link);border:1px solid var(--border)}
+.gs #gs-result{display:none;margin:12px 0 8px;padding:16px 18px;border:2px solid var(--accent);border-radius:12px;background:var(--card)}
+.gs #gs-result h3{margin:0 0 8px}
+.gs textarea{font:inherit;font-size:14px;width:100%;box-sizing:border-box;min-height:190px;padding:10px;border:1px solid var(--border);border-radius:8px;background:var(--card);color:inherit}
+.gs .warn,.gs-note{color:var(--muted);font-size:14px}
+@media print{header.site,.toc,nav.pn,footer.site,.crumb,article .hero .btn,.gs .acts,#cta-start,#cta-start~*{display:none!important}.gs .row{break-inside:avoid}.gs #gs-result{display:block}}
+</style>
+
+<form class="gs" id="gs" onsubmit="return false">
+<div id="gs-rows"></div>
+<div class="row"><b>あなたの経験（AI社員に渡す文に入ります・書かなくても進めます）</b><input type="text" id="gs-exp" placeholder="例: 料理は10年毎日作っている"></div>
+<div class="acts"><button type="button" id="gs-go">候補3つを出す</button><button type="button" class="ghost" id="gs-print">印刷・PDFで保存</button><button type="button" class="ghost" id="gs-reset">全部消す</button></div>
+<div id="gs-result" aria-live="polite"></div>
+</form>
+
+<script>
+(function(){
+  var G=[["歴史・雑学解説", "A"], ["キャンプ・アウトドア", "A"], ["ガジェット・家電レビュー", "A"], ["料理・簡単レシピ", "A"], ["旅行・おでかけ", "A"], ["副業・在宅ワーク", "A"], ["節約・家計管理", "B"], ["資格・勉強法", "B"], ["片付け・掃除・暮らし", "B"], ["AI活用・AIツール解説", "B"], ["ペット", "B"], ["お金・投資の基礎", "C"], ["筋トレ・ダイエット", "C"], ["英語学習", "C"], ["健康・睡眠", "C"], ["美容・スキンケア", "C"], ["本の要約・読書", "C"], ["子育て", "C"], ["転職・キャリア", "C"], ["シニア向けスマホ・PC", "C"]];
+  var KEY="wado-n72-genre-sheet-v1",N=5,Q=["Q1 続けられる","Q2 経験","Q3 買う人"];
+  var rows=document.getElementById("gs-rows"),out=document.getElementById("gs-result"),exp=document.getElementById("gs-exp");
+  function esc(t){return String(t).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];});}
+  var opts='<option value="">（ジャンルを選ぶ）</option>'+G.map(function(g,i){return '<option value="'+i+'">'+g[1]+'段 '+g[0]+'</option>';}).join("");
+  var h="";
+  for(var r=0;r<N;r++){
+    h+='<div class="row"><b>気になるジャンル '+(r+1)+'</b><select id="gs-g'+r+'">'+opts+'</select>';
+    for(var q=0;q<3;q++){
+      h+='<div class="q"><span>'+Q[q]+'</span>';
+      for(var v=2;v>=0;v--){h+='<label><input type="radio" name="gs-'+r+'-'+q+'" value="'+v+'">'+v+'点</label>';}
+      h+='</div>';
+    }
+    h+='<p class="tot" id="gs-t'+r+'"></p></div>';
+  }
+  rows.innerHTML=h;
+  function val(r,q){var c=document.querySelector('input[name="gs-'+r+'-'+q+'"]:checked');return c?+c.value:null;}
+  function read(){var a=[];for(var r=0;r<N;r++){a.push({g:document.getElementById("gs-g"+r).value,s:[val(r,0),val(r,1),val(r,2)]});}return a;}
+  function save(){try{localStorage.setItem(KEY,JSON.stringify({rows:read(),exp:exp.value}));}catch(e){}}
+  function load(){
+    var d=null;try{d=JSON.parse(localStorage.getItem(KEY)||"null");}catch(e){}
+    if(!d||!d.rows)return;
+    d.rows.forEach(function(x,r){
+      if(r>=N)return;
+      document.getElementById("gs-g"+r).value=x.g||"";
+      (x.s||[]).forEach(function(v,q){if(v===null||v===undefined)return;var el=document.querySelector('input[name="gs-'+r+'-'+q+'"][value="'+v+'"]');if(el)el.checked=true;});
+    });
+    exp.value=d.exp||"";
+  }
+  function totals(){
+    read().forEach(function(x,r){
+      var t=document.getElementById("gs-t"+r);
+      if(x.g===""){t.textContent="";return;}
+      var miss=x.s.filter(function(v){return v===null;}).length;
+      var sum=x.s.reduce(function(a,v){return a+(v||0);},0);
+      t.textContent=miss?"合計 "+sum+"点（未回答 "+miss+"問）":(x.s[0]===0?"合計 "+sum+"点（Q1 が0点なので候補から外れます）":"合計 "+sum+"点");
+    });
+  }
+  function show(){
+    var list=[],miss=[],seen={};
+    read().forEach(function(x){
+      if(x.g===""||seen[x.g])return;seen[x.g]=1;
+      if(x.s.indexOf(null)>=0){miss.push(G[x.g][0]);return;}
+      if(x.s[0]===0)return;
+      list.push({n:G[x.g][0],t:G[x.g][1],sum:x.s[0]+x.s[1]+x.s[2],q2:x.s[1]});
+    });
+    var rank={A:0,B:1,C:2};
+    list.sort(function(a,b){return b.sum-a.sum||b.q2-a.q2||rank[a.t]-rank[b.t];});
+    var top=list.slice(0,3),html;
+    if(!top.length){
+      html="<p class='warn'>候補がまだありません。ジャンルを選んで、3問すべてに点を付けてください（Q1 が0点のジャンルは外れます）。</p>";
+    }else{
+      var lines=["始めるジャンルの候補が"+top.length+"つあります。"];
+      top.forEach(function(x,i){lines.push((i+1)+". "+x.n);});
+      lines.push("私の経験: "+(exp.value.trim()||"（例: 料理は10年毎日作っている）"));
+      lines.push("それぞれのジャンルで伸びている動画を集めて、私が答えられる企画を10本ずつ出してください。");
+      lines.push("最後に、"+top.length+"つのうちどれから始めるのがよいか、理由と一緒に教えてください。");
+      html="<h3>あなたの候補</h3><ol>"+top.map(function(x){return "<li>"+esc(x.n)+"（"+x.t+"段・合計"+x.sum+"点）</li>";}).join("")+"</ol>"
+        +(top.length<3?"<p class='warn'>3つに足りません。一覧から気になるジャンルを足して点を付けるか、このまま次へ進んで大丈夫です。</p>":"")
+        +"<p><b>企画リサーチAI社員に渡す文</b>（コピーしてそのまま話しかけます）</p><textarea id='gs-text' readonly>"+esc(lines.join("\n"))+"</textarea>"
+        +"<div class='acts'><button type='button' id='gs-copy'>文をコピー</button></div>";
+    }
+    if(miss.length)html+="<p class='warn'>点が付いていないジャンルは数えていません: "+miss.map(esc).join("・")+"</p>";
+    out.innerHTML=html;out.style.display="block";
+    var cp=document.getElementById("gs-copy");
+    if(cp)cp.onclick=function(){
+      var ta=document.getElementById("gs-text");
+      function done(){cp.textContent="コピーしました";}
+      if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(ta.value).then(done,function(){ta.select();try{if(document.execCommand("copy"))done();}catch(e){}});}
+      else{ta.select();try{if(document.execCommand("copy"))done();}catch(e){}}
+    };
+  }
+  document.getElementById("gs").addEventListener("change",function(){totals();save();});
+  exp.addEventListener("input",save);
+  document.getElementById("gs-go").onclick=show;
+  document.getElementById("gs-print").onclick=function(){show();window.print();};
+  document.getElementById("gs-reset").onclick=function(){document.getElementById("gs").reset();try{localStorage.removeItem(KEY);}catch(e){}totals();out.style.display="none";out.innerHTML="";};
+  load();totals();
+})();
+</script>
+
+<p class="gs-note">入力は、この端末のブラウザに自動で保存されます。別のスマホ・PCには引き継がれません。残しておきたいときは「印刷・PDFで保存」を使ってください。</p>
+
+<h3 id="3_1">候補3つの決め方（記入表はこの順で自動で並べます）</h3>
 <ol>
 <li>先に、Q1 が0点のジャンルを外します（合計が高くても外します）</li>
 <li>残りを合計点が高い順に並べます</li>
